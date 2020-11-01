@@ -4,13 +4,12 @@
 # BUILD: docker build --rm -t puckel/docker-airflow .
 # SOURCE: https://github.com/puckel/docker-airflow
 
-FROM python:3.6-slim-buster
+FROM python:3.7.9-slim-buster
 LABEL maintainer="Puckel_"
 
 # Never prompts the user for choices on installation/configuration of packages
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM linux
-ENV GIT_REPO https://github.com/AVENTER-UG/airflow.git
 
 # Airflow
 ARG AIRFLOW_HOME=/home/airflow
