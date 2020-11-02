@@ -85,7 +85,8 @@ RUN pip install -U pip setuptools wheel \
     && pip install kubernetes \
     && pip install mesos.interface \
     && pip install celery[redis] \
-    && pip install gitpython 
+    && pip install gitpython \
+    && pip install attrs==20.1.0
 
 RUN cd /tmp/airflow && python3 setup.py install 
 
